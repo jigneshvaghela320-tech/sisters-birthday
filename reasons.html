@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Reasons Why You're The Best Sister 💖</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+</head>
+<body>
+
+    <!-- SITE HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">👑</span>
+                <span>Happy Birthday <span class="sister-name">Didi</span>!</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="memories.html" class="nav-link">📸 Memories</a></li>
+                <li><a href="reasons.html" class="nav-link active">💖 25 Reasons</a></li>
+                <li><a href="quiz.html" class="nav-link">🧩 Sister Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link">💌 Heartfelt Letter</a></li>
+                <li><a href="celebration.html" class="nav-link">🎂 Cake & Party</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="pill-btn sound-toggle-btn" title="Toggle festive audio">
+                    🔊 <span>Sound On</span>
+                </button>
+                <button class="pill-btn primary-pill open-personalize-btn" title="Personalize Sister's name & details">
+                    ⚙️ <span>Personalize</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+
+        <div class="section-header">
+            <span class="section-tag">CHAPTER TWO</span>
+            <h1 class="section-heading">25 Reasons Why You're The Best Sister 💖</h1>
+            <p class="section-description">
+                Science and sibling statistics agree: having you as an older sister is the greatest blessing in the world. Tap cards to flip or scratch to reveal!
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn-primary" id="random-flip-btn">
+                    🎲 Surprise Me With a Reason!
+                </button>
+                <button class="btn-secondary" id="flip-all-btn">
+                    ✨ Flip All Cards
+                </button>
+            </div>
+        </div>
+
+        <!-- MYSTERY SCRATCH-OFF SECTION -->
+        <section class="scratch-section">
+            <h2 style="font-family: var(--font-heading); color: var(--primary); text-align: center; margin-bottom: 0.5rem;">
+                ✨ Sibling Secret Scratch Cards ✨
+            </h2>
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.95rem;">
+                Rub your mouse or finger across the shimmering gold cards to scratch and reveal the secret sibling confessions!
+            </p>
+
+            <div class="scratch-grid">
+                <!-- Scratch 1 -->
+                <div class="scratch-card" id="scratch-1">
+                    <div class="scratch-hidden-content">
+                        <span style="font-size: 2rem;">🏆</span>
+                        <h4 style="color: var(--primary); margin: 0.3rem 0;">Ultimate Role Model</h4>
+                        <p style="font-size: 0.88rem; color: var(--text-main);">Even when I didn't say it out loud, I watched how you handled challenges and tried to be just as brave.</p>
+                    </div>
+                    <canvas class="scratch-canvas" width="300" height="180"></canvas>
+                </div>
+
+                <!-- Scratch 2 -->
+                <div class="scratch-card" id="scratch-2">
+                    <div class="scratch-hidden-content">
+                        <span style="font-size: 2rem;">🤫</span>
+                        <h4 style="color: var(--primary); margin: 0.3rem 0;">Vault of Secrets</h4>
+                        <p style="font-size: 0.88rem; color: var(--text-main);">You know every embarrassing story, every crush, and every secret — and you still haven't blackmailed me!</p>
+                    </div>
+                    <canvas class="scratch-canvas" width="300" height="180"></canvas>
+                </div>
+
+                <!-- Scratch 3 -->
+                <div class="scratch-card" id="scratch-3">
+                    <div class="scratch-hidden-content">
+                        <span style="font-size: 2rem;">👑</span>
+                        <h4 style="color: var(--primary); margin: 0.3rem 0;">House Royalty</h4>
+                        <p style="font-size: 0.88rem; color: var(--text-main);">No matter how old we get, you're always the boss — and honestly, you run this family like a queen.</p>
+                    </div>
+                    <canvas class="scratch-canvas" width="300" height="180"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- 25 FLIP CARDS GRID -->
+        <div class="reasons-grid" id="reasons-list">
+            <!-- 25 Reasons dynamically populated or rendered -->
+        </div>
+
+    </main>
+
+    <!-- UNIVERSAL PERSONALIZE MODAL -->
+    <div id="personalize-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close close-modal-btn">&times;</button>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--primary);">
+                ⚙️ Personalize This Website
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Enter your sister's details below! Every page, quiz, memory, and heartfelt letter will immediately update.
+            </p>
+
+            <form id="personalize-form">
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-name">Sister's Name / Honorific:</label>
+                    <input type="text" id="input-sister-name" class="form-input" placeholder="e.g. Pooja, Sarah, Didi" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-nickname">Nickname / Title:</label>
+                    <input type="text" id="input-sister-nickname" class="form-input" placeholder="e.g. Queen of Chaos, Bestie, Di">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-age">Age / Milestone (Optional):</label>
+                    <input type="text" id="input-sister-age" class="form-input" placeholder="e.g. 25, 30, Forever 21">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sibling-name">Your Name (Sibling):</label>
+                    <input type="text" id="input-sibling-name" class="form-input" placeholder="e.g. Jignesh, Little Bro" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-birthday-date">Sister's Birthday Date:</label>
+                    <input type="date" id="input-birthday-date" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-custom-wish">Personal Birthday Note:</label>
+                    <textarea id="input-custom-wish" class="form-textarea" rows="3" placeholder="A sweet personal message for her..."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" class="btn-secondary close-modal-btn" style="padding: 0.6rem 1.2rem;">Cancel</button>
+                    <button type="submit" class="btn-primary" style="padding: 0.6rem 1.5rem;">Save & Apply ✨</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="memories.html">Memories</a>
+                <a href="reasons.html">25 Reasons</a>
+                <a href="quiz.html">Sister Quiz</a>
+                <a href="wishes.html">Heartfelt Letter</a>
+                <a href="celebration.html">Party Room</a>
+            </nav>
+            <p>
+                Crafted with endless love & sibling admiration <span class="footer-heart">💖</span> by 
+                <strong class="sibling-name">Your Younger Sibling</strong> for <strong class="sister-name">Didi</strong>'s Birthday.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/confetti.js"></script>
+    <script src="assets/js/sound.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Reasons & Scratch Canvas Logic
+        (function () {
+            const REASONS_DATA = [
+                { num: 1, front: "The Pioneer Privilege", back: "You broke every family rule and curfew first, so parents were 10x more relaxed with me!" },
+                { num: 2, front: "Free Life Therapy", back: "I can call you in any emotional crisis and you always know the exact right thing to say." },
+                { num: 3, front: "Unmatched Wardrobe Swaps", back: "Your closet is essentially my extended closet (even if you complain every time I borrow something)." },
+                { num: 4, front: "The Ultimate Bodyguard", back: "You're sweet, but if anyone messes with me, you turn into a fierce protective lioness in 0.2 seconds." },
+                { num: 5, front: "Unfiltered Honest Opinions", back: "You tell me the brutal truth when an outfit or bad decision looks terrible, saving me from embarrassment." },
+                { num: 6, front: "Silent Eye-Contact Language", back: "We can look at each other across a crowded family dinner and have an entire conversation without saying one word." },
+                { num: 7, front: "Top-Tier Music & Movie Taste", back: "Every cool song, aesthetic movie, or series I fell in love with was originally recommended by you." },
+                { num: 8, front: "Emergency Snack Delivery", back: "You never come back from outside without bringing my favorite treat or snack." },
+                { num: 9, front: "Unbreakable Loyalty", back: "We might bicker over silly chores, but against the rest of the world, we are an invincible team." },
+                { num: 10, front: "Your Infectious Laugh", back: "Your laugh is so loud and chaotic that everyone in the room starts laughing just from hearing it." },
+                { num: 11, front: "Master Advice Dispenser", back: "From career crossroads to messy friendships, you always give pragmatic, mature guidance." },
+                { num: 12, front: "The Best Hype Woman", back: "Nobody cheers louder or celebrates my smallest victories with more genuine pride than you." },
+                { num: 13, front: "Infinite Patience", back: "Thank you for not disowning me during all those years I copied your hairstyle, clothes, and mannerisms." },
+                { num: 14, front: "Late Night Food Partner", back: "Craving dessert or fries at midnight? You're always ready to conspire and order." },
+                { num: 15, front: "Taught Me How To Drive & Stand Up", back: "You taught me how to navigate the road and how to stand up tall against anything unfair." },
+                { num: 16, front: "The Family Memory Keeper", back: "You remember the sweetest little details from our childhood that I would have completely forgotten." },
+                { num: 17, front: "You Forgive So Fast", back: "No argument has ever lasted longer than 24 hours before we burst out laughing again." },
+                { num: 18, front: "You're Inspiringly Hardworking", back: "Seeing how dedicated you are to your goals pushes me to aim higher every single day." },
+                { num: 19, front: "Safe Space For Tears", back: "I never have to pretend to be strong around you. With you, I can just be me." },
+                { num: 20, front: "The Comedian In Disguise", back: "Your spontaneous impressions of relatives and teachers deserve an Emmy award." },
+                { num: 21, front: "You Always Make Space", back: "No matter how busy your schedule is, you always make time when your sibling needs a talk." },
+                { num: 22, front: "Endless Generosity", back: "You always pick the most thoughtful gifts and remember what everyone secretly loves." },
+                { num: 23, front: "Calm in Every Storm", back: "Whenever panic strikes the household, you stay level-headed and bring order to chaos." },
+                { num: 24, front: "The Anchor of Our Home", back: "You bring so much warmth, laughter, and light into every room you enter." },
+                { num: 25, front: "Simply Irreplaceable", back: "Out of 8 billion people on Earth, I got the absolute best one as my big sister. Happy Birthday!" }
+            ];
+
+            const grid = document.getElementById('reasons-list');
+
+            // Render Flip Cards
+            REASONS_DATA.forEach(r => {
+                const card = document.createElement('div');
+                card.className = 'flip-card';
+                card.innerHTML = `
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="card-number">#${r.num}</span>
+                            <div class="card-prompt">${r.front}</div>
+                            <span class="tap-hint">Tap to Reveal 💖</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>${r.back}</p>
+                        </div>
+                    </div>
+                `;
+
+                card.addEventListener('click', () => {
+                    card.classList.toggle('flipped');
+                    if (window.Sound) window.Sound.click();
+                    if (card.classList.contains('flipped') && window.Confetti && Math.random() > 0.6) {
+                        window.Confetti.burst();
+                    }
+                });
+
+                grid.appendChild(card);
+            });
+
+            // Random Surprise Button
+            const surpriseBtn = document.getElementById('random-flip-btn');
+            surpriseBtn.addEventListener('click', () => {
+                const cards = document.querySelectorAll('.flip-card');
+                const randomCard = cards[Math.floor(Math.random() * cards.length)];
+                randomCard.classList.add('flipped');
+                randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (window.Confetti) window.Confetti.burst();
+                if (window.Sound) window.Sound.sparkle();
+            });
+
+            // Flip All Toggle
+            let allFlipped = false;
+            const flipAllBtn = document.getElementById('flip-all-btn');
+            flipAllBtn.addEventListener('click', () => {
+                allFlipped = !allFlipped;
+                document.querySelectorAll('.flip-card').forEach(c => {
+                    if (allFlipped) c.classList.add('flipped');
+                    else c.classList.remove('flipped');
+                });
+                flipAllBtn.textContent = allFlipped ? '🔄 Unflip All Cards' : '✨ Flip All Cards';
+                if (window.Sound) window.Sound.sparkle();
+            });
+
+            // Canvas Scratch Cards
+            function setupScratchCards() {
+                const canvases = document.querySelectorAll('.scratch-canvas');
+                canvases.forEach(canvas => {
+                    const ctx = canvas.getContext('2d');
+                    const w = canvas.width;
+                    const h = canvas.height;
+
+                    // Fill canvas with gold/silver shimmering scratch coating
+                    const grad = ctx.createLinearGradient(0, 0, w, h);
+                    grad.addColorStop(0, '#e5c07b');
+                    grad.addColorStop(0.3, '#f9e79f');
+                    grad.addColorStop(0.7, '#d4af37');
+                    grad.addColorStop(1, '#aa8c2c');
+
+                    ctx.fillStyle = grad;
+                    ctx.fillRect(0, 0, w, h);
+
+                    // Scratch prompt text
+                    ctx.fillStyle = '#6e5414';
+                    ctx.font = 'bold 16px Outfit, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText('✨ Scratch Here to Reveal ✨', w / 2, h / 2 - 8);
+                    ctx.font = '12px Outfit, sans-serif';
+                    ctx.fillText('(Rub with mouse or touch)', w / 2, h / 2 + 16);
+
+                    let isDrawing = false;
+
+                    function scratch(x, y) {
+                        ctx.globalCompositeOperation = 'destination-out';
+                        ctx.beginPath();
+                        ctx.arc(x, y, 22, 0, Math.PI * 2);
+                        ctx.fill();
+
+                        if (window.Sound && Math.random() > 0.8) {
+                            window.Sound.click();
+                        }
+                    }
+
+                    function getPos(e) {
+                        const rect = canvas.getBoundingClientRect();
+                        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                        return {
+                            x: (clientX - rect.left) * (canvas.width / rect.width),
+                            y: (clientY - rect.top) * (canvas.height / rect.height)
+                        };
+                    }
+
+                    canvas.addEventListener('mousedown', (e) => {
+                        isDrawing = true;
+                        const pos = getPos(e);
+                        scratch(pos.x, pos.y);
+                    });
+
+                    window.addEventListener('mouseup', () => { isDrawing = false; });
+
+                    canvas.addEventListener('mousemove', (e) => {
+                        if (!isDrawing) return;
+                        const pos = getPos(e);
+                        scratch(pos.x, pos.y);
+                    });
+
+                    // Touch events
+                    canvas.addEventListener('touchstart', (e) => {
+                        isDrawing = true;
+                        const pos = getPos(e);
+                        scratch(pos.x, pos.y);
+                    }, { passive: true });
+
+                    canvas.addEventListener('touchmove', (e) => {
+                        if (!isDrawing) return;
+                        const pos = getPos(e);
+                        scratch(pos.x, pos.y);
+                    }, { passive: true });
+                });
+            }
+
+            setupScratchCards();
+        })();
+    </script>
+</body>
+</html>

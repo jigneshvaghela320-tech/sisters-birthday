@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sister Trivia Challenge 🧩</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+</head>
+<body>
+
+    <!-- SITE HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">👑</span>
+                <span>Happy Birthday <span class="sister-name">Didi</span>!</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="memories.html" class="nav-link">📸 Memories</a></li>
+                <li><a href="reasons.html" class="nav-link">💖 25 Reasons</a></li>
+                <li><a href="quiz.html" class="nav-link active">🧩 Sister Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link">💌 Heartfelt Letter</a></li>
+                <li><a href="celebration.html" class="nav-link">🎂 Cake & Party</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="pill-btn sound-toggle-btn" title="Toggle festive audio">
+                    🔊 <span>Sound On</span>
+                </button>
+                <button class="pill-btn primary-pill open-personalize-btn" title="Personalize Sister's name & details">
+                    ⚙️ <span>Personalize</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+
+        <div class="section-header">
+            <span class="section-tag">CHAPTER THREE</span>
+            <h1 class="section-heading">How Well Do You Know <span class="sister-name">Didi</span>? 🧩</h1>
+            <p class="section-description">
+                Put your sibling knowledge to the test! Answer 8 hilarious questions to win the Official Sisterhood Champion Award.
+            </p>
+        </div>
+
+        <!-- QUIZ CONTAINER -->
+        <div class="quiz-container" id="quiz-box">
+            
+            <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="quiz-progress"></div>
+            </div>
+
+            <div class="quiz-header">
+                <span class="quiz-question-num" id="quiz-step-indicator">Question 1 of 8</span>
+                <span style="font-weight: 700; color: var(--primary);" id="quiz-score-badge">Score: 0</span>
+            </div>
+
+            <h2 class="quiz-question-title" id="quiz-question-text">
+                Loading question...
+            </h2>
+
+            <div class="quiz-options" id="quiz-options-list">
+                <!-- Dynamically populated buttons -->
+            </div>
+
+            <div class="quiz-feedback-box" id="quiz-feedback"></div>
+
+            <div style="margin-top: 1.5rem; text-align: right; display: none;" id="quiz-next-container">
+                <button class="btn-primary" id="quiz-next-btn">
+                    Next Question &rarr;
+                </button>
+            </div>
+        </div>
+
+        <!-- RESULT & CERTIFICATE CONTAINER (Hidden by default) -->
+        <div id="quiz-result-box" style="display: none; max-width: 800px; margin: 0 auto 3.5rem;">
+            
+            <div class="certificate-card" id="printable-certificate">
+                <div style="font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #a16207; margin-bottom: 0.5rem;">
+                    OFFICIAL SIBLING ACADEMY AWARD
+                </div>
+                <h2 class="certificate-title">Certificate of Sisterhood Excellence</h2>
+                <div class="certificate-seal">🎖️</div>
+                <p style="font-size: 1.15rem; color: #57534e; margin-bottom: 1.2rem;">
+                    This prestigious honor is proudly awarded to:
+                </p>
+                <div style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 1rem;" class="sister-name">
+                    Didi
+                </div>
+                <p style="font-size: 1.1rem; line-height: 1.7; max-width: 580px; margin: 0 auto 1.5rem; color: #44403c;">
+                    For extraordinary patience, legendary advice, sharing snacks (most of the time), surviving sibling drama, and remaining the undefeated <strong>World's Greatest Big Sister</strong>.
+                </p>
+
+                <div style="display: flex; justify-content: space-around; margin-top: 2rem; border-top: 1px dashed #d6d3d1; padding-top: 1.5rem;">
+                    <div>
+                        <span style="font-family: var(--font-handwriting); font-size: 1.8rem; color: var(--primary); display: block;" class="sibling-name">Your Sibling</span>
+                        <span style="font-size: 0.8rem; text-transform: uppercase; color: #78716c; font-weight: 700;">Certified By</span>
+                    </div>
+                    <div>
+                        <span style="font-family: var(--font-heading); font-size: 1.4rem; color: #854d0e; display: block;">100% SIBLING LOVE</span>
+                        <span style="font-size: 0.8rem; text-transform: uppercase; color: #78716c; font-weight: 700;">Official Stamp</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                <button class="btn-primary" onclick="window.print();">
+                    🖨️ Print / Save Certificate
+                </button>
+                <button class="btn-secondary" id="retake-quiz-btn">
+                    🔄 Retake Quiz
+                </button>
+                <a href="celebration.html" class="btn-primary" style="background: linear-gradient(135deg, var(--secondary) 0%, #b37feb 100%);">
+                    🎂 Go to Celebration Room &rarr;
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- UNIVERSAL PERSONALIZE MODAL -->
+    <div id="personalize-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close close-modal-btn">&times;</button>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--primary);">
+                ⚙️ Personalize This Website
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Enter your sister's details below! Every page, quiz, memory, and heartfelt letter will immediately update.
+            </p>
+
+            <form id="personalize-form">
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-name">Sister's Name / Honorific:</label>
+                    <input type="text" id="input-sister-name" class="form-input" placeholder="e.g. Pooja, Sarah, Didi" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-nickname">Nickname / Title:</label>
+                    <input type="text" id="input-sister-nickname" class="form-input" placeholder="e.g. Queen of Chaos, Bestie, Di">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-age">Age / Milestone (Optional):</label>
+                    <input type="text" id="input-sister-age" class="form-input" placeholder="e.g. 25, 30, Forever 21">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sibling-name">Your Name (Sibling):</label>
+                    <input type="text" id="input-sibling-name" class="form-input" placeholder="e.g. Jignesh, Little Bro" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-birthday-date">Sister's Birthday Date:</label>
+                    <input type="date" id="input-birthday-date" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-custom-wish">Personal Birthday Note:</label>
+                    <textarea id="input-custom-wish" class="form-textarea" rows="3" placeholder="A sweet personal message for her..."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" class="btn-secondary close-modal-btn" style="padding: 0.6rem 1.2rem;">Cancel</button>
+                    <button type="submit" class="btn-primary" style="padding: 0.6rem 1.5rem;">Save & Apply ✨</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="memories.html">Memories</a>
+                <a href="reasons.html">25 Reasons</a>
+                <a href="quiz.html">Sister Quiz</a>
+                <a href="wishes.html">Heartfelt Letter</a>
+                <a href="celebration.html">Party Room</a>
+            </nav>
+            <p>
+                Crafted with endless love & sibling admiration <span class="footer-heart">💖</span> by 
+                <strong class="sibling-name">Your Younger Sibling</strong> for <strong class="sister-name">Didi</strong>'s Birthday.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/confetti.js"></script>
+    <script src="assets/js/sound.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Interactive Quiz Logic
+        (function () {
+            const QUESTIONS = [
+                {
+                    q: "When an older sister says 'I will be ready in 5 minutes', what is the actual scientific time?",
+                    options: [
+                        "Exactly 300 seconds",
+                        "Minimum 45 minutes and 3 outfit changes",
+                        "She is already in the car waiting",
+                        "Time ceases to exist in her closet"
+                    ],
+                    correct: 1,
+                    feedback: "🎯 Accurate! Standard Big Sister Time™ requires at least three mirror consultations!"
+                },
+                {
+                    q: "What is her superpower whenever there is drama or chaos at home?",
+                    options: [
+                        "Becoming a master diplomat and solving it",
+                        "Hiding in her room with snacks and headphones",
+                        "Making everybody laugh with a ridiculous joke",
+                        "All of the above depending on the day!"
+                    ],
+                    correct: 3,
+                    feedback: "🌟 Absolutely! She has an entire arsenal of superpowers!"
+                },
+                {
+                    q: "If something mysterious breaks in the house, who is the primary suspect?",
+                    options: [
+                        "The dog/cat",
+                        "The younger sibling (guilty until proven innocent)",
+                        "A sudden earthquake",
+                        "Big Sister will heroically defend you"
+                    ],
+                    correct: 1,
+                    feedback: "😂 Sibling Law #1: The younger one is automatically suspect #1!"
+                },
+                {
+                    q: "What is the guaranteed secret remedy to turn her bad mood into a smile?",
+                    options: [
+                        "Her favorite coffee/boba or sweet dessert",
+                        "Giving her full control of the TV remote",
+                        "Saying 'You were right, I was wrong'",
+                        "A big warm hug and chocolate"
+                    ],
+                    correct: 0,
+                    feedback: "🍫 Sweet food is the direct pathway to sisterly bliss!"
+                },
+                {
+                    q: "What happens if someone outside treats her younger sibling unfairly?",
+                    options: [
+                        "She ignores it",
+                        "She writes a polite letter",
+                        "She goes full protective superhero mode!",
+                        "She shrugs"
+                    ],
+                    correct: 2,
+                    feedback: "🦁 Mess with the sibling, you face the wrath of the Big Sister!"
+                },
+                {
+                    q: "What is the official rule regarding borrowing her hoodies or clothes?",
+                    options: [
+                        "You must submit a written form 3 days in advance",
+                        "Take it secretly, get caught, and pretend it was yours",
+                        "She gladly gives everything away",
+                        "Total lockdown"
+                    ],
+                    correct: 1,
+                    feedback: "👗 The classic heist: 'Wait, is that my hoodie you are wearing?!'"
+                },
+                {
+                    q: "Who is the best secret-keeper in the entire family?",
+                    options: [
+                        "Big Sister (the vault)",
+                        "Mom (it will be shared with 4 aunts in 10 mins)",
+                        "The family parrot",
+                        "The diary under the mattress"
+                    ],
+                    correct: 0,
+                    feedback: "🔐 Once told to Didi, the secret stays safe in the vault forever!"
+                },
+                {
+                    q: "Overall, what rating does she deserve as an older sister?",
+                    options: [
+                        "10/10",
+                        "100/10",
+                        "Infinity/10 - The Absolute Greatest!",
+                        "All of the stars in the galaxy!"
+                    ],
+                    correct: 2,
+                    feedback: "👑 Unanimous decision: Infinity out of 10! The world's finest sister!"
+                }
+            ];
+
+            let currentIndex = 0;
+            let score = 0;
+            let answered = false;
+
+            const qText = document.getElementById('quiz-question-text');
+            const optsContainer = document.getElementById('quiz-options-list');
+            const stepInd = document.getElementById('quiz-step-indicator');
+            const scoreBadge = document.getElementById('quiz-score-badge');
+            const progress = document.getElementById('quiz-progress');
+            const feedback = document.getElementById('quiz-feedback');
+            const nextContainer = document.getElementById('quiz-next-container');
+            const nextBtn = document.getElementById('quiz-next-btn');
+
+            const quizBox = document.getElementById('quiz-box');
+            const resultBox = document.getElementById('quiz-result-box');
+            const retakeBtn = document.getElementById('retake-quiz-btn');
+
+            function renderQuestion() {
+                answered = false;
+                feedback.className = 'quiz-feedback-box';
+                feedback.textContent = '';
+                nextContainer.style.display = 'none';
+
+                const cur = QUESTIONS[currentIndex];
+                stepInd.textContent = `Question ${currentIndex + 1} of ${QUESTIONS.length}`;
+                scoreBadge.textContent = `Score: ${score} / ${QUESTIONS.length}`;
+                progress.style.width = `${((currentIndex + 1) / QUESTIONS.length) * 100}%`;
+
+                // Update text with sister name
+                const sisName = window.SisterApp ? window.SisterApp.profile.sisterName : 'Didi';
+                qText.textContent = cur.q.replace(/older sister|sister/gi, sisName);
+
+                optsContainer.innerHTML = '';
+                cur.options.forEach((opt, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quiz-opt-btn';
+                    btn.innerHTML = `<span>${opt}</span> <span class="opt-icon"></span>`;
+                    btn.addEventListener('click', () => handleAnswer(idx, btn));
+                    optsContainer.appendChild(btn);
+                });
+            }
+
+            function handleAnswer(chosenIdx, btn) {
+                if (answered) return;
+                answered = true;
+                const cur = QUESTIONS[currentIndex];
+                const allBtns = optsContainer.querySelectorAll('.quiz-opt-btn');
+
+                allBtns.forEach(b => b.disabled = true);
+
+                if (chosenIdx === cur.correct) {
+                    score++;
+                    scoreBadge.textContent = `Score: ${score} / ${QUESTIONS.length}`;
+                    btn.classList.add('correct');
+                    btn.querySelector('.opt-icon').textContent = '✅';
+                    feedback.className = 'quiz-feedback-box show correct';
+                    feedback.textContent = cur.feedback;
+                    if (window.Sound) window.Sound.sparkle();
+                    if (window.Confetti) window.Confetti.burst();
+                } else {
+                    btn.classList.add('wrong');
+                    btn.querySelector('.opt-icon').textContent = '❌';
+                    allBtns[cur.correct].classList.add('correct');
+                    allBtns[cur.correct].querySelector('.opt-icon').textContent = '✅';
+                    feedback.className = 'quiz-feedback-box show wrong';
+                    feedback.textContent = `Nice try! The sibling truth is: "${cur.options[cur.correct]}"`;
+                    if (window.Sound) window.Sound.buzz();
+                }
+
+                nextContainer.style.display = 'block';
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex++;
+                if (currentIndex < QUESTIONS.length) {
+                    renderQuestion();
+                    if (window.Sound) window.Sound.click();
+                } else {
+                    showResult();
+                }
+            });
+
+            function showResult() {
+                quizBox.style.display = 'none';
+                resultBox.style.display = 'block';
+                if (window.Sound) window.Sound.fanfare();
+                if (window.Confetti) window.Confetti.shower(4000);
+            }
+
+            retakeBtn.addEventListener('click', () => {
+                currentIndex = 0;
+                score = 0;
+                resultBox.style.display = 'none';
+                quizBox.style.display = 'block';
+                renderQuestion();
+                if (window.Sound) window.Sound.click();
+            });
+
+            renderQuestion();
+        })();
+    </script>
+</body>
+</html>

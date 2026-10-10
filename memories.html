@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Scrapbook - Celebrating Didi 🎉</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+</head>
+<body>
+
+    <!-- SITE HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">👑</span>
+                <span>Happy Birthday <span class="sister-name">Didi</span>!</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="memories.html" class="nav-link active">📸 Memories</a></li>
+                <li><a href="reasons.html" class="nav-link">💖 25 Reasons</a></li>
+                <li><a href="quiz.html" class="nav-link">🧩 Sister Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link">💌 Heartfelt Letter</a></li>
+                <li><a href="celebration.html" class="nav-link">🎂 Cake & Party</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="pill-btn sound-toggle-btn" title="Toggle festive audio">
+                    🔊 <span>Sound On</span>
+                </button>
+                <button class="pill-btn primary-pill open-personalize-btn" title="Personalize Sister's name & details">
+                    ⚙️ <span>Personalize</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+
+        <div class="section-header">
+            <span class="section-tag">CHAPTER ONE</span>
+            <h1 class="section-heading">Memory Lane & Scrapbook 📸</h1>
+            <p class="section-description">
+                From childhood squabbles over the TV remote to midnight life chats — every chapter with you has been a treasure.
+            </p>
+            <div style="margin-top: 1.5rem;">
+                <button class="btn-primary" id="open-add-memory-btn">
+                    ➕ Add a New Memory
+                </button>
+            </div>
+        </div>
+
+        <!-- CATEGORY FILTERS -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">🌟 All Memories</button>
+            <button class="filter-btn" data-filter="childhood">👶 Childhood</button>
+            <button class="filter-btn" data-filter="adventures">🚗 Adventures</button>
+            <button class="filter-btn" data-filter="talks">☕ Late-Night Talks</button>
+            <button class="filter-btn" data-filter="funny">😂 Silly Moments</button>
+        </div>
+
+        <!-- POLAROID MEMORIES GRID -->
+        <div class="memories-grid" id="memories-container">
+            
+            <!-- Memory 1 -->
+            <div class="polaroid-card" data-category="childhood" data-title="The Ice Cream Heist" data-date="Summer of Childhood" data-story="Remember when mom told us only one scoop each, but you secretly swapped cones with me so I got the bigger chocolate scoop? You’ve been taking care of me ever since.">
+                <div class="polaroid-img-wrapper">
+                    <img src="assets/images/childhood.jpg" alt="Childhood ice cream memory" loading="lazy">
+                </div>
+                <div class="polaroid-meta">
+                    <span class="polaroid-date">Childhood Days</span>
+                    <h3 class="polaroid-caption">The Ice Cream Treaty</h3>
+                    <p class="polaroid-subtext">Sharing sweetness in the afternoon sun</p>
+                </div>
+            </div>
+
+            <!-- Memory 2 -->
+            <div class="polaroid-card" data-category="adventures" data-title="Our Unforgettable Sunset Road Trip" data-date="Wanderlust Days" data-story="Windows down, playlist screaming at full volume, and not a single care in the world. Being lost with you is 100 times better than being anywhere else on schedule.">
+                <div class="polaroid-img-wrapper">
+                    <img src="assets/images/adventures.jpg" alt="Sister road trip adventure" loading="lazy">
+                </div>
+                <div class="polaroid-meta">
+                    <span class="polaroid-date">Road Trips & Sunsets</span>
+                    <h3 class="polaroid-caption">The Highway Duet</h3>
+                    <p class="polaroid-subtext">Hot mugs, good music, and endless horizons</p>
+                </div>
+            </div>
+
+            <!-- Memory 3 -->
+            <div class="polaroid-card" data-category="talks" data-title="Midnight Maggi & Life Talks" data-date="2:00 AM Tradition" data-story="Whenever life got heavy, your room was the sanctuary. Cooking midnight noodles quietly so we wouldn't wake anyone, dissecting dreams, relationships, and college stress. You are my forever therapist.">
+                <div class="polaroid-img-wrapper" style="background: linear-gradient(135deg, #ffd8e2, #fed6e3); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    🍜
+                </div>
+                <div class="polaroid-meta">
+                    <span class="polaroid-date">Midnight Conversations</span>
+                    <h3 class="polaroid-caption">Midnight Noodles & Advice</h3>
+                    <p class="polaroid-subtext">The kitchen talks that fixed every bad day</p>
+                </div>
+            </div>
+
+            <!-- Memory 4 -->
+            <div class="polaroid-card" data-category="funny" data-title="The TV Remote Cold War" data-date="Classic Sibling Battles" data-story="Who owned the remote control for the afternoon cartoons? The epic battles, the negotiations, and the inevitable truce when Mom walked into the room and we pretended to study!">
+                <div class="polaroid-img-wrapper" style="background: linear-gradient(135deg, #e0c3fc, #8ec5fc); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    📺
+                </div>
+                <div class="polaroid-meta">
+                    <span class="polaroid-date">Sibling Dynamics</span>
+                    <h3 class="polaroid-caption">The Battle for the Remote</h3>
+                    <p class="polaroid-subtext">Fought fiercely, made up immediately</p>
+                </div>
+            </div>
+
+            <!-- Memory 5 -->
+            <div class="polaroid-card" data-category="childhood" data-title="Teaming Up Against Mom & Dad" data-date="The Alliance" data-story="Whenever one of us wanted permission for a trip or a late evening out, we had our secret strategy meetings beforehand. An unbreakable sibling coalition.">
+                <div class="polaroid-img-wrapper" style="background: linear-gradient(135deg, #fbc2eb, #a6c1ee); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    🤝
+                </div>
+                <div class="polaroid-meta">
+                    <span class="polaroid-date">Partners in Crime</span>
+                    <h3 class="polaroid-caption">The Sibling Alliance</h3>
+                    <p class="polaroid-subtext">Always backing each other up</p>
+                </div>
+            </div>
+
+            <!-- Memory 6 -->
+            <div class="polaroid-card" data-category="adventures" data-title="Shopping Spree & Fashion Guru" data-date="Style Days" data-story="Whenever I couldn't decide what to wear or buy, your nod of approval was the only one that mattered. Thanks for being my personal stylist for free!">
+                <div class="polaroid-img-wrapper" style="background: linear-gradient(135deg, #ffecd2, #fcb69f); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    🛍️
+                </div>
+                <div class="polaroid-meta">
+                    <span class="polaroid-date">Shopping & Style</span>
+                    <h3 class="polaroid-caption">My Personal Stylist</h3>
+                    <p class="polaroid-subtext">Turning bad fashion into iconic fits</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="memory-lightbox" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="close-lightbox-btn">&times;</button>
+            <div id="lightbox-img-container" style="max-height: 320px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 1.5rem; text-align: center; background: #f8f8f8;">
+                <img id="lightbox-img" src="" alt="Memory preview" style="max-width: 100%; max-height: 320px; object-fit: contain;">
+                <div id="lightbox-emoji" style="font-size: 5rem; padding: 2rem; display: none;"></div>
+            </div>
+            <span id="lightbox-date" style="font-size: 0.8rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px;"></span>
+            <h2 id="lightbox-title" style="font-family: var(--font-heading); color: var(--text-main); margin: 0.5rem 0 1rem;"></h2>
+            <p id="lightbox-story" style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.7;"></p>
+        </div>
+    </div>
+
+    <!-- ADD MEMORY MODAL -->
+    <div id="add-memory-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="close-add-modal-btn">&times;</button>
+            <h2 style="font-family: var(--font-heading); color: var(--primary); margin-bottom: 0.4rem;">
+                ➕ Add a Special Memory
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.4rem;">
+                Save a precious photo and memory with <span class="sister-name">Didi</span> to the scrapbook!
+            </p>
+
+            <form id="add-memory-form">
+                <div class="form-group">
+                    <label class="form-label">Memory Title:</label>
+                    <input type="text" id="memory-title" class="form-input" placeholder="e.g. Di's Graduation Day" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Category:</label>
+                    <select id="memory-category" class="form-input">
+                        <option value="childhood">👶 Childhood</option>
+                        <option value="adventures">🚗 Adventures</option>
+                        <option value="talks">☕ Late-Night Talks</option>
+                        <option value="funny">😂 Silly Moments</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Date or Era:</label>
+                    <input type="text" id="memory-date" class="form-input" placeholder="e.g. Summer 2021 / That Rainy Sunday">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Photo (Upload file or pick emoji):</label>
+                    <input type="file" id="memory-file" class="form-input" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Story / Caption:</label>
+                    <textarea id="memory-story" class="form-textarea" rows="3" placeholder="Tell the story behind this moment..." required></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" class="btn-secondary" id="cancel-add-btn">Cancel</button>
+                    <button type="submit" class="btn-primary">Save to Scrapbook ✨</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- UNIVERSAL PERSONALIZE MODAL -->
+    <div id="personalize-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close close-modal-btn">&times;</button>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--primary);">
+                ⚙️ Personalize This Website
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Enter your sister's details below! Every page, quiz, memory, and heartfelt letter will immediately update.
+            </p>
+
+            <form id="personalize-form">
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-name">Sister's Name / Honorific:</label>
+                    <input type="text" id="input-sister-name" class="form-input" placeholder="e.g. Pooja, Sarah, Didi" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-nickname">Nickname / Title:</label>
+                    <input type="text" id="input-sister-nickname" class="form-input" placeholder="e.g. Queen of Chaos, Bestie, Di">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-age">Age / Milestone (Optional):</label>
+                    <input type="text" id="input-sister-age" class="form-input" placeholder="e.g. 25, 30, Forever 21">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sibling-name">Your Name (Sibling):</label>
+                    <input type="text" id="input-sibling-name" class="form-input" placeholder="e.g. Jignesh, Little Bro" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-birthday-date">Sister's Birthday Date:</label>
+                    <input type="date" id="input-birthday-date" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-custom-wish">Personal Birthday Note:</label>
+                    <textarea id="input-custom-wish" class="form-textarea" rows="3" placeholder="A sweet personal message for her..."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" class="btn-secondary close-modal-btn" style="padding: 0.6rem 1.2rem;">Cancel</button>
+                    <button type="submit" class="btn-primary" style="padding: 0.6rem 1.5rem;">Save & Apply ✨</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="memories.html">Memories</a>
+                <a href="reasons.html">25 Reasons</a>
+                <a href="quiz.html">Sister Quiz</a>
+                <a href="wishes.html">Heartfelt Letter</a>
+                <a href="celebration.html">Party Room</a>
+            </nav>
+            <p>
+                Crafted with endless love & sibling admiration <span class="footer-heart">💖</span> by 
+                <strong class="sibling-name">Your Younger Sibling</strong> for <strong class="sister-name">Didi</strong>'s Birthday.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/confetti.js"></script>
+    <script src="assets/js/sound.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Page-specific Scrapbook Script
+        (function () {
+            const LOCAL_MEMORIES_KEY = 'sister_custom_memories';
+            const container = document.getElementById('memories-container');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const lightbox = document.getElementById('memory-lightbox');
+            const closeLightbox = document.getElementById('close-lightbox-btn');
+            const addModal = document.getElementById('add-memory-modal');
+            const openAddBtn = document.getElementById('open-add-memory-btn');
+            const closeAddBtn = document.getElementById('close-add-modal-btn');
+            const cancelAddBtn = document.getElementById('cancel-add-btn');
+            const addForm = document.getElementById('add-memory-form');
+
+            // Category Filtering
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const category = btn.getAttribute('data-filter');
+                    
+                    document.querySelectorAll('.polaroid-card').forEach(card => {
+                        const cardCat = card.getAttribute('data-category');
+                        if (category === 'all' || cardCat === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    if (window.Sound) window.Sound.click();
+                });
+            });
+
+            // Lightbox handler
+            function bindCardClick(card) {
+                card.addEventListener('click', () => {
+                    const title = card.getAttribute('data-title');
+                    const date = card.getAttribute('data-date');
+                    const story = card.getAttribute('data-story');
+                    const img = card.querySelector('.polaroid-img-wrapper img');
+                    const emojiDiv = card.querySelector('.polaroid-img-wrapper');
+
+                    document.getElementById('lightbox-title').textContent = title;
+                    document.getElementById('lightbox-date').textContent = date;
+                    document.getElementById('lightbox-story').textContent = story;
+
+                    const lImg = document.getElementById('lightbox-img');
+                    const lEmoji = document.getElementById('lightbox-emoji');
+
+                    if (img && img.src) {
+                        lImg.src = img.src;
+                        lImg.style.display = 'inline-block';
+                        lEmoji.style.display = 'none';
+                    } else {
+                        lImg.style.display = 'none';
+                        lEmoji.style.display = 'block';
+                        lEmoji.textContent = emojiDiv ? emojiDiv.textContent.trim() : '💖';
+                    }
+
+                    lightbox.classList.add('active');
+                    if (window.Sound) window.Sound.click();
+                });
+            }
+
+            document.querySelectorAll('.polaroid-card').forEach(bindCardClick);
+
+            closeLightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.remove('active');
+            });
+
+            // Add Memory Modal
+            openAddBtn.addEventListener('click', () => {
+                addModal.classList.add('active');
+                if (window.Sound) window.Sound.click();
+            });
+            const hideAddModal = () => addModal.classList.remove('active');
+            closeAddBtn.addEventListener('click', hideAddModal);
+            cancelAddBtn.addEventListener('click', hideAddModal);
+            addModal.addEventListener('click', (e) => {
+                if (e.target === addModal) hideAddModal();
+            });
+
+            // Load Custom Memories from localStorage
+            function loadCustomMemories() {
+                try {
+                    const saved = localStorage.getItem(LOCAL_MEMORIES_KEY);
+                    if (!saved) return;
+                    const items = JSON.parse(saved);
+                    items.forEach(item => renderMemoryCard(item));
+                } catch (e) {
+                    console.warn(e);
+                }
+            }
+
+            function renderMemoryCard(data) {
+                const card = document.createElement('div');
+                card.className = 'polaroid-card';
+                card.setAttribute('data-category', data.category);
+                card.setAttribute('data-title', data.title);
+                card.setAttribute('data-date', data.date || 'Timeless Memory');
+                card.setAttribute('data-story', data.story);
+
+                let imgHtml = '';
+                if (data.image) {
+                    imgHtml = `<img src="${data.image}" alt="${data.title}">`;
+                } else {
+                    imgHtml = `<div style="font-size: 4rem; display:flex; height: 100%; align-items:center; justify-content:center;">💖</div>`;
+                }
+
+                card.innerHTML = `
+                    <div class="polaroid-img-wrapper">${imgHtml}</div>
+                    <div class="polaroid-meta">
+                        <span class="polaroid-date">${data.date || 'Precious Moment'}</span>
+                        <h3 class="polaroid-caption">${data.title}</h3>
+                        <p class="polaroid-subtext">Added with sibling love</p>
+                    </div>
+                `;
+
+                container.prepend(card);
+                bindCardClick(card);
+            }
+
+            // Handle Add Memory Submission
+            addForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const title = document.getElementById('memory-title').value.trim();
+                const category = document.getElementById('memory-category').value;
+                const date = document.getElementById('memory-date').value.trim() || 'Special Memory';
+                const story = document.getElementById('memory-story').value.trim();
+                const fileInput = document.getElementById('memory-file');
+
+                const saveItem = (imgSrc) => {
+                    const newMem = { title, category, date, story, image: imgSrc };
+                    let current = [];
+                    try {
+                        const existing = localStorage.getItem(LOCAL_MEMORIES_KEY);
+                        if (existing) current = JSON.parse(existing);
+                    } catch (err) {}
+                    current.push(newMem);
+                    localStorage.setItem(LOCAL_MEMORIES_KEY, JSON.stringify(current));
+
+                    renderMemoryCard(newMem);
+                    hideAddModal();
+                    addForm.reset();
+                    if (window.Confetti) window.Confetti.burst();
+                    if (window.Sound) window.Sound.sparkle();
+                    if (window.SisterApp) window.SisterApp.showToast('📸 New memory added to scrapbook!');
+                };
+
+                if (fileInput.files && fileInput.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => saveItem(ev.target.result);
+                    reader.readAsDataURL(fileInput.files[0]);
+                } else {
+                    saveItem(null);
+                }
+            });
+
+            loadCustomMemories();
+        })();
+    </script>
+</body>
+</html>

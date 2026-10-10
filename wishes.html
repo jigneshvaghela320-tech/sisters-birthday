@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartfelt Letter & Guestbook - For Didi 💌</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>">
+</head>
+<body>
+
+    <!-- SITE HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">👑</span>
+                <span>Happy Birthday <span class="sister-name">Didi</span>!</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+
+            <ul class="navbar-links">
+                <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="memories.html" class="nav-link">📸 Memories</a></li>
+                <li><a href="reasons.html" class="nav-link">💖 25 Reasons</a></li>
+                <li><a href="quiz.html" class="nav-link">🧩 Sister Quiz</a></li>
+                <li><a href="wishes.html" class="nav-link active">💌 Heartfelt Letter</a></li>
+                <li><a href="celebration.html" class="nav-link">🎂 Cake & Party</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="pill-btn sound-toggle-btn" title="Toggle festive audio">
+                    🔊 <span>Sound On</span>
+                </button>
+                <button class="pill-btn primary-pill open-personalize-btn" title="Personalize Sister's name & details">
+                    ⚙️ <span>Personalize</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+
+        <div class="section-header">
+            <span class="section-tag">CHAPTER FOUR</span>
+            <h1 class="section-heading">Heartfelt Letter & Wishing Wall 💌</h1>
+            <p class="section-description">
+                Some words are too deep to say out loud on regular days. Break the wax seal below to read a personal letter, then check out wishes from everyone who loves you!
+            </p>
+        </div>
+
+        <!-- 3D SEALED LETTER ENVELOPE -->
+        <div class="envelope-wrapper">
+            <div class="letter-envelope" id="envelope-trigger">
+                <div class="wax-seal" id="wax-seal-btn">
+                    <span>💌</span>
+                </div>
+                <h2 class="envelope-prompt">To My Dearest Older Sister</h2>
+                <p class="envelope-sub">Click the wax seal to unfold this personal sibling letter ✨</p>
+            </div>
+
+            <!-- UNFOLDED LETTER PAPER -->
+            <div class="letter-paper" id="opened-letter">
+                <p style="margin-bottom: 1.2rem;">
+                    <strong>Dear <span class="sister-name">Didi</span>,</strong>
+                </p>
+                <p style="margin-bottom: 1.2rem;">
+                    I don’t know who I would be today without you walking a few steps ahead of me, lighting the path.
+                </p>
+                <p style="margin-bottom: 1.2rem;">
+                    Growing up, you were my bodyguard against the world, my shield when I made foolish mistakes, and the voice of calm whenever things felt overwhelming. Even when we bickered over trivial things, stolen t-shirts, or who took the last piece of cake, I always knew deep down that you loved me unconditionally.
+                </p>
+                <p style="margin-bottom: 1.2rem;">
+                    You are ambitious, fiercely kind, hysterically funny, and stronger than you ever give yourself credit for. Watching you chase your goals inspires me to be a better person every single day.
+                </p>
+                <p style="margin-bottom: 1.2rem;">
+                    On your birthday, I wish you peace of mind, wild adventures, boundless joy, and dreams fulfilled. May this upcoming year give back to you even half the warmth and kindness you pour into everyone around you.
+                </p>
+                <p class="custom-wish-text" style="margin-bottom: 1.2rem; font-style: italic; color: var(--primary);">
+                    Thank you for being my constant guide, my biggest cheerleader, and my favourite person to annoy! You deserve all the joy, love, and magic this world has to offer.
+                </p>
+                <div class="letter-sign">
+                    With all my love and endless admiration,<br>
+                    <span class="sibling-name" style="font-size: 2rem; color: var(--primary);">Your Little Sibling</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIGITAL GUESTBOOK / WISHING WALL -->
+        <div class="section-header" style="margin-top: 4.5rem; margin-bottom: 2rem;">
+            <span class="section-tag">BIRTHDAY GUESTBOOK</span>
+            <h2 class="section-heading">Sticky Notes from Loved Ones 🌸</h2>
+            <p class="section-description">
+                Leave your blessing, birthday message, or funny wish for <span class="sister-name">Didi</span>!
+            </p>
+            <div style="margin-top: 1.5rem;">
+                <button class="btn-primary" id="open-wish-form-btn">
+                    ✍️ Pin Your Birthday Wish
+                </button>
+            </div>
+        </div>
+
+        <!-- WISHES GRID WALL -->
+        <div class="wishes-masonry" id="wishes-container">
+            
+            <!-- Sample Wish 1 -->
+            <div class="wish-note pink">
+                <div class="wish-header">
+                    <span class="wish-author">Mom & Dad 👨‍👩‍👧</span>
+                    <span class="wish-tag">Parents</span>
+                </div>
+                <p class="wish-body">
+                    Happy birthday to our wonderful daughter! You make us proud each and every day with your kindness, strength, and big heart. May God bless you with endless health and happiness!
+                </p>
+                <div class="wish-footer">
+                    <span>🎂 Birthday Blessing</span>
+                    <button class="like-btn">❤️ <span class="like-count">12</span></button>
+                </div>
+            </div>
+
+            <!-- Sample Wish 2 -->
+            <div class="wish-note purple">
+                <div class="wish-header">
+                    <span class="wish-author"><span class="sibling-name">Your Sibling</span> 🎈</span>
+                    <span class="wish-tag">Sibling</span>
+                </div>
+                <p class="wish-body">
+                    Happy Birthday to the coolest big sister ever! I promise to be 10% less annoying for the next 24 hours. Enjoy your special day, Queen!
+                </p>
+                <div class="wish-footer">
+                    <span>👑 Sibling Bond</span>
+                    <button class="like-btn">❤️ <span class="like-count">18</span></button>
+                </div>
+            </div>
+
+            <!-- Sample Wish 3 -->
+            <div class="wish-note">
+                <div class="wish-header">
+                    <span class="wish-author">The Squad 🥂</span>
+                    <span class="wish-tag">Best Friends</span>
+                </div>
+                <p class="wish-body">
+                    Cheers to another fabulous year of being glamorous, unstoppable, and the life of every party! Can't wait to celebrate tonight!
+                </p>
+                <div class="wish-footer">
+                    <span>✨ Squad Love</span>
+                    <button class="like-btn">❤️ <span class="like-count">9</span></button>
+                </div>
+            </div>
+
+            <!-- Sample Wish 4 -->
+            <div class="wish-note green">
+                <div class="wish-header">
+                    <span class="wish-author">Extended Family 🌸</span>
+                    <span class="wish-tag">Family</span>
+                </div>
+                <p class="wish-body">
+                    Wishing our dear <span class="sister-name">Didi</span> the happiest of birthdays! Keep shining bright and spreading your warm smile wherever you go!
+                </p>
+                <div class="wish-footer">
+                    <span>🌟 Warm Wishes</span>
+                    <button class="like-btn">❤️ <span class="like-count">7</span></button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- LEAVE A WISH MODAL -->
+    <div id="wish-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="close-wish-modal-btn">&times;</button>
+            <h2 style="font-family: var(--font-heading); color: var(--primary); margin-bottom: 0.4rem;">
+                ✍️ Leave a Birthday Wish
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.4rem;">
+                Pin a colorful note on <span class="sister-name">Didi</span>'s birthday wall!
+            </p>
+
+            <form id="add-wish-form">
+                <div class="form-group">
+                    <label class="form-label">Your Name:</label>
+                    <input type="text" id="wish-name-input" class="form-input" placeholder="e.g. Grandma, Cousin Alex, Bestie" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Relationship / Role:</label>
+                    <input type="text" id="wish-relation-input" class="form-input" placeholder="e.g. Sister, Friend, Brother, Cousin">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Note Color Style:</label>
+                    <select id="wish-color-input" class="form-input">
+                        <option value="pink">🌸 Rose Pink</option>
+                        <option value="purple">💜 Royal Purple</option>
+                        <option value="yellow">💛 Warm Sunshine</option>
+                        <option value="green">🍃 Mint Fresh</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Emoji Sticker:</label>
+                    <select id="wish-emoji-input" class="form-input">
+                        <option value="🎂">🎂 Birthday Cake</option>
+                        <option value="💖">💖 Sparkling Heart</option>
+                        <option value="👑">👑 Queen Crown</option>
+                        <option value="🥂">🥂 Party Cheers</option>
+                        <option value="🌸">🌸 Cherry Blossom</option>
+                        <option value="⭐">⭐ Golden Star</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Your Message:</label>
+                    <textarea id="wish-message-input" class="form-textarea" rows="3" placeholder="Write your warm birthday wishes here..." required></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" class="btn-secondary" id="cancel-wish-modal-btn">Cancel</button>
+                    <button type="submit" class="btn-primary">Pin Sticky Note ✨</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- UNIVERSAL PERSONALIZE MODAL -->
+    <div id="personalize-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close close-modal-btn">&times;</button>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--primary);">
+                ⚙️ Personalize This Website
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Enter your sister's details below! Every page, quiz, memory, and heartfelt letter will immediately update.
+            </p>
+
+            <form id="personalize-form">
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-name">Sister's Name / Honorific:</label>
+                    <input type="text" id="input-sister-name" class="form-input" placeholder="e.g. Pooja, Sarah, Didi" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-nickname">Nickname / Title:</label>
+                    <input type="text" id="input-sister-nickname" class="form-input" placeholder="e.g. Queen of Chaos, Bestie, Di">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sister-age">Age / Milestone (Optional):</label>
+                    <input type="text" id="input-sister-age" class="form-input" placeholder="e.g. 25, 30, Forever 21">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-sibling-name">Your Name (Sibling):</label>
+                    <input type="text" id="input-sibling-name" class="form-input" placeholder="e.g. Jignesh, Little Bro" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-birthday-date">Sister's Birthday Date:</label>
+                    <input type="date" id="input-birthday-date" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-custom-wish">Personal Birthday Note:</label>
+                    <textarea id="input-custom-wish" class="form-textarea" rows="3" placeholder="A sweet personal message for her..."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" class="btn-secondary close-modal-btn" style="padding: 0.6rem 1.2rem;">Cancel</button>
+                    <button type="submit" class="btn-primary" style="padding: 0.6rem 1.5rem;">Save & Apply ✨</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="memories.html">Memories</a>
+                <a href="reasons.html">25 Reasons</a>
+                <a href="quiz.html">Sister Quiz</a>
+                <a href="wishes.html">Heartfelt Letter</a>
+                <a href="celebration.html">Party Room</a>
+            </nav>
+            <p>
+                Crafted with endless love & sibling admiration <span class="footer-heart">💖</span> by 
+                <strong class="sibling-name">Your Younger Sibling</strong> for <strong class="sister-name">Didi</strong>'s Birthday.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/confetti.js"></script>
+    <script src="assets/js/sound.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Letter Opening & Guestbook Wall
+        (function () {
+            const STORAGE_WISHES = 'sister_guestbook_wishes';
+            const envelopeBtn = document.getElementById('envelope-trigger');
+            const openedLetter = document.getElementById('opened-letter');
+
+            // Open sealed letter
+            let isLetterOpen = false;
+            envelopeBtn.addEventListener('click', () => {
+                isLetterOpen = !isLetterOpen;
+                if (isLetterOpen) {
+                    openedLetter.classList.add('open');
+                    envelopeBtn.style.display = 'none';
+                    if (window.Confetti) window.Confetti.burst();
+                    if (window.Sound) window.Sound.sparkle();
+                }
+            });
+
+            // Like Buttons
+            function bindLikes(btn) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const countEl = btn.querySelector('.like-count');
+                    let count = parseInt(countEl.textContent, 10) || 0;
+                    count++;
+                    countEl.textContent = count;
+                    btn.style.transform = 'scale(1.25)';
+                    setTimeout(() => { btn.style.transform = 'scale(1)'; }, 200);
+                    if (window.Sound) window.Sound.sparkle();
+                });
+            }
+            document.querySelectorAll('.like-btn').forEach(bindLikes);
+
+            // Add Wish Modal
+            const wishModal = document.getElementById('wish-modal');
+            const openWishBtn = document.getElementById('open-wish-form-btn');
+            const closeWishBtn = document.getElementById('close-wish-modal-btn');
+            const cancelWishBtn = document.getElementById('cancel-wish-modal-btn');
+            const addWishForm = document.getElementById('add-wish-form');
+            const wishesContainer = document.getElementById('wishes-container');
+
+            const hideWishModal = () => wishModal.classList.remove('active');
+            openWishBtn.addEventListener('click', () => {
+                wishModal.classList.add('active');
+                if (window.Sound) window.Sound.click();
+            });
+            closeWishBtn.addEventListener('click', hideWishModal);
+            cancelWishBtn.addEventListener('click', hideWishModal);
+            wishModal.addEventListener('click', (e) => {
+                if (e.target === wishModal) hideWishModal();
+            });
+
+            // Render Wish
+            function renderWishCard(wish) {
+                const card = document.createElement('div');
+                card.className = `wish-note ${wish.color}`;
+                card.innerHTML = `
+                    <div class="wish-header">
+                        <span class="wish-author">${wish.name} ${wish.emoji}</span>
+                        <span class="wish-tag">${wish.relation || 'Friend'}</span>
+                    </div>
+                    <p class="wish-body">${wish.message}</p>
+                    <div class="wish-footer">
+                        <span>✨ New Wish</span>
+                        <button class="like-btn">❤️ <span class="like-count">1</span></button>
+                    </div>
+                `;
+                wishesContainer.prepend(card);
+                bindLikes(card.querySelector('.like-btn'));
+            }
+
+            // Load saved wishes
+            try {
+                const saved = localStorage.getItem(STORAGE_WISHES);
+                if (saved) {
+                    const wishes = JSON.parse(saved);
+                    wishes.forEach(w => renderWishCard(w));
+                }
+            } catch (e) {}
+
+            // Save new wish
+            addWishForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('wish-name-input').value.trim();
+                const relation = document.getElementById('wish-relation-input').value.trim();
+                const color = document.getElementById('wish-color-input').value;
+                const emoji = document.getElementById('wish-emoji-input').value;
+                const message = document.getElementById('wish-message-input').value.trim();
+
+                const newWish = { name, relation, color, emoji, message };
+
+                let current = [];
+                try {
+                    const existing = localStorage.getItem(STORAGE_WISHES);
+                    if (existing) current = JSON.parse(existing);
+                } catch (err) {}
+                current.push(newWish);
+                localStorage.setItem(STORAGE_WISHES, JSON.stringify(current));
+
+                renderWishCard(newWish);
+                hideWishModal();
+                addWishForm.reset();
+
+                if (window.Confetti) window.Confetti.burst();
+                if (window.Sound) window.Sound.sparkle();
+                if (window.SisterApp) window.SisterApp.showToast('💌 Your birthday wish is pinned on the wall!');
+            });
+        })();
+    </script>
+</body>
+</html>
